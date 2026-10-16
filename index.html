@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yasin Malak — React Native & Web Developer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#top">Yasin<span>Malak</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <p class="hero-kicker">React Native &amp; Expo Developer</p>
+      <h1>I build cross-platform apps and modern web experiences.</h1>
+      <p class="hero-lede">I am Yasin Malak, a developer from Swat, Pakistan. I build iOS and Android apps with React Native and Expo, and full-stack web apps with React, Next.js, TypeScript and Supabase.</p>
+      <p class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View my projects</a>
+        <a class="btn btn-ghost" href="#contact">Work with me</a>
+      </p>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>I turn ideas into working products: from a complete e-commerce store with an admin operations console, to an AI-powered item-finder app that recognises objects in a photo and remembers where you kept them. My final-year project, MobileBazaar, is a full-stack mobile phone store built for the Pakistan market with PKR pricing, EMI plans and cash-on-delivery.</p>
+      <p>I care about clean, feature-by-feature commits, honest scope, and shipping things that actually run. I am currently available for freelance projects.</p>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Mobile</h3>
+          <ul><li>React Native</li><li>Expo</li><li>TypeScript</li><li>React Navigation</li></ul>
+        </article>
+        <article class="skill-card">
+          <h3>Web</h3>
+          <ul><li>React</li><li>Next.js</li><li>HTML5 &amp; CSS3</li><li>JavaScript (ES6+)</li></ul>
+        </article>
+        <article class="skill-card">
+          <h3>Backend &amp; Data</h3>
+          <ul><li>Supabase (PostgreSQL, Auth, RLS)</li><li>Firebase</li><li>REST APIs</li><li>Node.js basics</li></ul>
+        </article>
+        <article class="skill-card">
+          <h3>Tools</h3>
+          <ul><li>Git &amp; GitHub</li><li>VS Code</li><li>Vercel</li><li>Postman</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <p class="section-lede">A selection of my work. The full list lives on my GitHub.</p>
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p class="section-lede">Have a project in mind? Send a message and I will get back to you.</p>
+      <form id="contact-form" novalidate>
+        <label for="cf-name">Your name</label>
+        <input id="cf-name" name="name" type="text" autocomplete="name">
+        <p class="field-error" data-error-for="cf-name"></p>
+
+        <label for="cf-email">Your email</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email">
+        <p class="field-error" data-error-for="cf-email"></p>
+
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5"></textarea>
+        <p class="field-error" data-error-for="cf-message"></p>
+
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Yasin Malak · Swat, Pakistan</p>
+      <p><a href="https://github.com/YasinmkDev">GitHub</a> · <a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
