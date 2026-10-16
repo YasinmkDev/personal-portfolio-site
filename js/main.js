@@ -13,3 +13,15 @@ if (navToggle && navLinks) {
     }
   });
 }
+
+// Render project cards from js/projects-data.js
+(function renderProjects() {
+  var grid = document.getElementById('projects-grid');
+  if (!grid || typeof PROJECTS === 'undefined') return;
+  grid.innerHTML = PROJECTS.map(function (p) {
+    var tags = p.tags.map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('');
+    return '<article class="project-card"><h3>' + p.name + '</h3><p>' + p.description +
+      '</p><div class="tag-row">' + tags + '</div>' +
+      '<a class="project-link" href="' + p.url + '" target="_blank" rel="noopener">View on GitHub</a></article>';
+  }).join('');
+})();
