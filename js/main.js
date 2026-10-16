@@ -50,3 +50,39 @@ if (navToggle && navLinks) {
     form.reset();
   });
 })();
+
+// Dark mode toggle, persisted in localStorage
+(function themeToggle() {
+  var btn = document.getElementById('theme-toggle');
+  var saved = null;
+  try { saved = localStorage.getItem('portfolio-theme'); } catch (e) {}
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  function sync() {
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (btn) btn.textContent = dark ? 'Light' : 'Dark';
+  }
+  sync();
+  if (btn) btn.addEventListener('click', function () {
+    var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (dark) document.documentElement.removeAttribute('data-theme');
+    else document.documentElement.setAttribute('data-theme', 'dark');
+    try { localStorage.setItem('portfolio-theme', dark ? 'light' : 'dark'); } catch (e) {}
+    sync();
+  });
+})();
+
+// Scroll reveal animations
+(function reveal() {
+  var items = document.querySelectorAll('.section, .project-card, .skill-card');
+  items.forEach(function (el) { el.classList.add('reveal'); });
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(function (el) { io.observe(el); });
+})();
