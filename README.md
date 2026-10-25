@@ -17,6 +17,17 @@ Plain HTML5, CSS3 and vanilla JavaScript — no frameworks, no build step. A fou
 - Accessibility: skip link, visible focus states, aria labels
 - SEO: meta description, OpenGraph tags, SVG favicon
 
+## Screens
+
+Single-page site: hero, About, Skills, Projects (rendered from `js/projects-data.js`), and Contact.
+
+![Home, desktop](docs/screenshots/home-desktop.png)
+![Home, mobile](docs/screenshots/home-mobile.png)
+![About](docs/screenshots/about.png)
+![Skills](docs/screenshots/skills.png)
+![Projects](docs/screenshots/projects.png)
+![Contact](docs/screenshots/contact.png)
+
 ## Run locally
 Open `index.html` in a browser, or serve the folder:
 ```
